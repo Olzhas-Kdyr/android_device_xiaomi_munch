@@ -224,6 +224,9 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # Init
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_munch)
 
