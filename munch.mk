@@ -8,16 +8,17 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common custom stuff.
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 # Inherit from munch device
 $(call inherit-product, device/xiaomi/munch/device.mk)
 
-# crDroid - Disable MatLog
-TARGET_DISABLE_MATLOG := true
+# ASCP
+ASCP_MAINTAINER := Olzhas0986
+ASCP_MAINTAINER_LINK := https://github.com/olzhas0986
 
-PRODUCT_NAME := lineage_munch
+PRODUCT_NAME := munch
 PRODUCT_DEVICE := munch
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
